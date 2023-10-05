@@ -6,9 +6,13 @@ COPY . .
 RUN pip install --upgrade pip \
     && pip install pptx2md
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["pptx2md"]
+
 # Build:
 #   docker build -t pptx2md .
 #
-# Run:
-#   docker run -it --rm -v ${PWD}/input:/input -v ${PWD}/output:/output pptx2md pptx2md /input/ContainerizedUtilities.pptx -o /output/ContainerizedUtilities.md -i /output/images
+# Smple usage:
+#	Put your pptx file in the /input directory.
+#	Ensure that the directories /output, and /output/images exist, then run:
+#		docker run -it --rm -v ${PWD}/input:/input -v ${PWD}/output:/output pptx2md /input/MyPresentation.pptx -o /output/MyPresentation.md -i /output/images
+#   find your output file in the /output directory and the related images in /output/images .
