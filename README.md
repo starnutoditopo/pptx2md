@@ -4,6 +4,8 @@
 
 A tool to convert Powerpoint pptx file into markdown.
 
+(originally forked from https://github.com/starnutoditopo/pptx2md )
+
 **Preserved formats:**
 
 * Titles. Custom table of contents with fuzzy matching is supported.
